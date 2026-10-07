@@ -75,6 +75,19 @@ namespace Recursividad.logica
             a = b;
             b = aux;
         }
+           
+
+        //Método agregar
+
+        public void Agregar(int numero)
+        {
+            if (EstaLleno)
+            {
+                throw new Exception("Elarreglo esta lleno");
+            }
+            _arreglo[_tope] = numero;
+            _tope++;
+        }
 
         
     }

@@ -112,6 +112,50 @@ namespace Recursividad.logica
             _arreglo[posicion] = numero;
             _tope++;
         }
+        //Método Eliminar
+        public void Eliminar(int posicion)
+        {
+            if (EstaVacio)
+            {
+                throw new Exception("El arreglo esta vacio");
+            }
+            if (posicion < 0)
+            {
+                posicion = 0;
+            }
+            if (posicion > _tope)
+            {
+                posicion = _tope;
+            }
+            for (int i = posicion; i < _tope - 1; i++)
+            {
+                _arreglo[i] = _arreglo[i + 1];
+            }
+            _tope--;
+        }
 
+
+        //Método ToString
+        public override string ToString()
+        {
+            if (EstaVacio)
+            {
+                return "Esta vacío";
+            }
+
+            string cadena = string.Empty;
+            int contador = 0;
+            for (int i = 0; i < _tope; i++)
+            {
+                cadena += $"{_arreglo[i]}\t";
+                contador++;
+                if (contador > 9)
+                {
+                    contador = 0;
+                    cadena += "\n";
+                }
+            }
+            return cadena;
+        }
     }
 }

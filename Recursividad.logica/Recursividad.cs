@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
-namespace Recursividad.logica
+namespace Arreglos.Logica
 {
     public class MiArreglo
     {
@@ -68,6 +68,7 @@ namespace Recursividad.logica
                 }
             }
         }
+
         //Métod Cambiar
         public void Cambiar(ref int a, ref int b)
         {
@@ -75,7 +76,6 @@ namespace Recursividad.logica
             a = b;
             b = aux;
         }
-           
 
         //Método agregar
 
@@ -112,6 +112,7 @@ namespace Recursividad.logica
             _arreglo[posicion] = numero;
             _tope++;
         }
+
         //Método Eliminar
         public void Eliminar(int posicion)
         {
